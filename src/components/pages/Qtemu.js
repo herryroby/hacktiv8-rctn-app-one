@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { AttendanceInfo } from '../atoms';
-import Footer from '../Footer';
+import Footer from '../atoms/Footer';
 import Header from '../Header';
 import { Card } from '../molecules';
 import NavBar from '../NavBar';
@@ -82,7 +82,7 @@ const QtemuPage = () => (
         <div />
       </section>
     </div>
-    <Footer />
+    <Footer>Copyright Hacktiv8 2018</Footer>
   </>
 );
 

@@ -110,13 +110,3 @@ section a {
   flex-direction: row;
   justify-content: space-between;
 } */
-
-.footer-container {
-  margin: 50px 30px 10px 30px;
-}
-
-.footer-copyright {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0px;
-}
