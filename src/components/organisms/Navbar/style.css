@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  padding: 5px 0;
+}
+
+.nav-link {
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus,
+.nav-link:hover,
+.nav-link:focus {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.bg-primary {
+  background-color: #007bff;
+}
+
+.mr-auto {
+  margin-right: auto;
+}

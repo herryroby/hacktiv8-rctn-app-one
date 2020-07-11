@@ -7,11 +7,9 @@
   background-color: #e9ecef;
   background-clip: border-box;
   border: 0;
-  /* border-radius: 0.25rem; */
 }
 
-/* TODO: change ccs name to card-header after uninstall react-bootstrap */
-.c-header {
+.card-header {
   padding: 1.25rem 1.25rem 0rem 1.25rem;
   margin-bottom: 0;
 }
@@ -25,8 +23,6 @@
   flex: 1 1 auto;
   min-height: 1px;
   padding: 0rem 1.25rem 1.25rem 1.25rem;
-  width: 300px;
-  max-width: 100%;
 }
 
 .card-button {

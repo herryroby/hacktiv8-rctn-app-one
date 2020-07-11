@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Button } from '../../atoms';
+import Button from '../../atoms/Button';
 import './style.css';
 
 const propTypes = {
@@ -16,7 +16,7 @@ const defaultProps = {
 
 const Card = ({ children, className, title, ...rest }) => (
   <div className={classNames('card', className)} {...rest}>
-    <div className="c-header">
+    <div className="card-header">
       <p className="card-title">{title}</p>
       <hr />
     </div>

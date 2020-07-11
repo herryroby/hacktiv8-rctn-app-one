@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../atoms';
+import Button from '../../../atoms/Button';
 
 class CounterCC extends React.Component {
   constructor() {
@@ -34,7 +34,7 @@ class CounterCC extends React.Component {
           marginTop: '50px',
         }}
       >
-        <h3>Class Component</h3>
+        <h3 style={{ fontWeight: 600 }}>Class Component</h3>
         <div>{count}</div>
         <div style={{ margin: '10px' }}>
           <Button style={{ width: '50px' }} onClick={this.handleIncrement}>

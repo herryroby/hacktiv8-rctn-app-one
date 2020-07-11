@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from './atoms';
+import Button from '../../atoms/Button';
+import './style.css';
 
 const Header = () => (
   <header>

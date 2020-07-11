@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '../atoms';
+import Button from '../../../atoms/Button';
 
 const CounterFC = () => {
   const [count, setCount] = useState(0);
@@ -25,7 +25,7 @@ const CounterFC = () => {
         marginTop: '50px',
       }}
     >
-      <h3>Functional Component (Hooks)</h3>
+      <h3 style={{ fontWeight: 600 }}>Functional Component (Hooks)</h3>
       <div>{count}</div>
       <div style={{ margin: '10px' }}>
         <Button style={{ width: '50px' }} onClick={handleIncrement}>
