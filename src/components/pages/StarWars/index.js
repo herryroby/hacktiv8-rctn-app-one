@@ -4,43 +4,47 @@ import StarWarsDetail from '../../organisms/StarWarsDetail';
 import ErrorHandler from '../../templates/ErrorHandler';
 import './style.css';
 
+const URL = 'https://swapi.dev/api/people/';
+
 class StarWars extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
-      person: {},
+      currentUrlDetail: null,
     };
   }
 
   componentDidMount() {
-    axios
-      .get('https://swapi.dev/api/people/')
-      .then((res) => {
-        this.setState({
-          data: res.data.results,
-          person: res.data.results[0],
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    this.fetchData(URL);
   }
 
-  handleClick = (person) => this.setState({ person });
+  fetchData = async (url) => {
+    try {
+      const res = await axios.get(url);
+      this.setState({
+        data: res.data.results,
+        currentUrlDetail: res.data.results[0].url,
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  handleClick = (person) => this.setState({ currentUrlDetail: person.url });
 
   render() {
-    const { data, person: personData } = this.state;
+    const { data, currentUrlDetail } = this.state;
     return (
       <>
         <ErrorHandler>
           <div className="d-flex mb-50">
             <div className="text-center">
-              <h2>Details</h2>
-              <StarWarsDetail person={personData} />
+              <h1>Details</h1>
+              {currentUrlDetail && <StarWarsDetail url={currentUrlDetail} />}
             </div>
             <div className="d-flex text-center">
-              <h2>Star Wars</h2>
+              <h1>Star Wars</h1>
               {data.length > 0 ? (
                 data.map((person) => (
                   <div

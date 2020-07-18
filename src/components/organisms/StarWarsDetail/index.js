@@ -1,8 +1,9 @@
+import axios from 'axios';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const propTypes = {
-  person: PropTypes.object.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 class StarWarsDetail extends React.Component {
@@ -14,16 +15,25 @@ class StarWarsDetail extends React.Component {
   }
 
   componentDidMount() {
-    const { person } = this.props;
-    this.setState({ person });
+    const { url } = this.props;
+    this.fetchData(url);
   }
 
   componentDidUpdate(prevProps) {
-    const { person } = this.props;
-    if (person.name !== prevProps.person.name) {
-      this.setState({ person }); // eslint-disable-line
+    const { url } = this.props;
+    if (url !== prevProps.url) {
+      this.fetchData(url);
     }
   }
+
+  fetchData = async (url) => {
+    try {
+      const res = await axios.get(url);
+      this.setState({ person: res.data });
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   render() {
     const { person } = this.state;
