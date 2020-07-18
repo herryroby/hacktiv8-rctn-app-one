@@ -1,7 +1,8 @@
 import React from 'react';
-import AttendanceInfo from '../atoms/AttendanceInfo';
-import Card from '../molecules/Card';
-import Layout from '../templates/Layout';
+import AttendanceInfo from '../../atoms/AttendanceInfo';
+import Card from '../../molecules/Card';
+import Layout from '../../templates/Layout';
+import './style.css';
 
 const QtemuPage = () => (
   <Layout>

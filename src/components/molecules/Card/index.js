@@ -21,7 +21,7 @@ const Card = ({ children, className, title, ...rest }) => (
       <hr />
     </div>
     <div className="card-body">
-      <p>{children}</p>
+      {children}
       <Button className="card-button">View</Button>
     </div>
   </div>

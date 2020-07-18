@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Footer from '../atoms/Footer';
-import Header from '../organisms/Header';
-import NavBar from '../organisms/Navbar';
+import Footer from '../../atoms/Footer';
+import Header from '../../organisms/Header';
+import NavBar from '../../organisms/Navbar';
+import './style.css';
 
 const propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,

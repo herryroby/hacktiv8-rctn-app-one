@@ -9,14 +9,14 @@ const Header = () => (
       <div className="header-info">
         <p className="header-title">Hacktiv8 Meetup</p>
         <p>
-          Location<span style={{ marginLeft: '45px' }}>Jakarta, Indonesia</span>
+          Location<span className="info-location">Jakarta, Indonesia</span>
         </p>
         <p>
           Members
-          <span style={{ marginLeft: '38px' }}>1,078</span>
+          <span className="info-members">1,078</span>
         </p>
         <p>
-          Organizers <span style={{ marginLeft: '25px' }}>Adhy Wiranata</span>
+          Organizers <span className="info-organizers">Adhy Wiranata</span>
         </p>
         <Button className="btn-join-us">Join Us</Button>
       </div>

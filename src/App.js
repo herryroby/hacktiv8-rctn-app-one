@@ -1,13 +1,16 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import Counter from './components/pages/Counter';
-import Qtemu from './components/pages/Qtemu';
+import QtemuPage from './components/pages/Qtemu';
+import StarWars from './components/pages/StarWars';
 
 const App = () => (
   <>
-    <Qtemu />
+    <QtemuPage />
     <hr />
     <Counter />
+    <hr />
+    <StarWars />
   </>
 );
 
