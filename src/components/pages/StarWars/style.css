@@ -14,8 +14,9 @@ h1 {
 }
 
 .list-person {
+  font-weight: 600;
   cursor: pointer;
-  color: #00f;
+  color: #f39222;
 }
 
 .mb-50 {

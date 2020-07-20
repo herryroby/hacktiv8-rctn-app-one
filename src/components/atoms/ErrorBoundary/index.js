@@ -6,7 +6,7 @@ const propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
-class ErrorHandler extends React.Component {
+class ErrorBoundary extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -26,10 +26,10 @@ class ErrorHandler extends React.Component {
     const { children } = this.props;
     const { error } = this.state;
 
-    return <>{error ? <div className="error-text">Something went wrong</div> : children}</>;
+    return <>{error ? <div className="error-text-block">Something went wrong</div> : children}</>;
   }
 }
 
-ErrorHandler.propTypes = propTypes;
+ErrorBoundary.propTypes = propTypes;
 
-export default ErrorHandler;
+export default ErrorBoundary;

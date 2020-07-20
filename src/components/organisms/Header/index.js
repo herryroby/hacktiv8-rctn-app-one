@@ -1,5 +1,5 @@
+import { Button } from 'antd';
 import React from 'react';
-import Button from '../../atoms/Button';
 import './style.css';
 
 const Header = () => (
@@ -18,7 +18,9 @@ const Header = () => (
         <p>
           Organizers <span className="info-organizers">Adhy Wiranata</span>
         </p>
-        <Button className="btn-join-us">Join Us</Button>
+        <Button type="primary" className="join-us-button">
+          Join Us
+        </Button>
       </div>
     </div>
   </header>

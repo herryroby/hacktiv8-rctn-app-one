@@ -12,6 +12,7 @@
 .card-header {
   padding: 1.25rem 1.25rem 0rem 1.25rem;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .card-title {
@@ -23,9 +24,22 @@
   flex: 1 1 auto;
   min-height: 1px;
   padding: 0rem 1.25rem 1.25rem 1.25rem;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .card-button {
   width: 100px;
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .card-header {
+    text-align: center;
+  }
+
+  .card-body {
+    text-align: center;
+    margin-top: 20px;
+  }
 }

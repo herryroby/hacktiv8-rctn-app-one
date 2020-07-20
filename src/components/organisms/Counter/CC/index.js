@@ -1,5 +1,6 @@
+import { Button } from 'antd';
 import React from 'react';
-import Button from '../../../atoms/Button';
+import './style.css';
 
 class CounterCC extends React.Component {
   constructor() {
@@ -34,17 +35,17 @@ class CounterCC extends React.Component {
           marginTop: '50px',
         }}
       >
-        <h3 style={{ fontWeight: 600 }}>Class Component</h3>
+        <h3>Class Component</h3>
         <div>{count}</div>
-        <div style={{ margin: '10px' }}>
-          <Button style={{ width: '50px' }} onClick={this.handleIncrement}>
+        <div className="btn-container">
+          <Button type="primary" className="btn-w-50" onClick={this.handleIncrement}>
             +
           </Button>
-          <Button style={{ width: '50px', marginLeft: '10px' }} onClick={this.handleDecrement}>
+          <Button type="primary" className="btn-w-50 ml-1" onClick={this.handleDecrement}>
             -
           </Button>
         </div>
-        {error && <div style={{ color: '#f00' }}>Minus is not allowed</div>}
+        {error && <p className="error-text">Minus is not allowed</p>}
       </div>
     );
   }

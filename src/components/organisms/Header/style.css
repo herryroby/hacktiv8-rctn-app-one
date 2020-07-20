@@ -35,13 +35,18 @@
   margin-left: 25px;
 }
 
-.btn-join-us {
+.join-us-button {
   width: 135px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
+}
+
+@media (max-width: 576px) {
   .header-container {
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .header-info {
@@ -56,7 +61,19 @@
     margin-left: 10px;
   }
 
-  .btn-join-us {
+  .join-us-button {
     margin-top: 20px;
   }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1600px) {
 }

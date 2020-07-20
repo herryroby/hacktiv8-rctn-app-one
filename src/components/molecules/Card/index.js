@@ -1,7 +1,7 @@
+import { Button } from 'antd';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '../../atoms/Button';
 import './style.css';
 
 const propTypes = {
@@ -22,7 +22,9 @@ const Card = ({ children, className, title, ...rest }) => (
     </div>
     <div className="card-body">
       {children}
-      <Button className="card-button">View</Button>
+      <Button type="primary" className="card-button">
+        View
+      </Button>
     </div>
   </div>
 );

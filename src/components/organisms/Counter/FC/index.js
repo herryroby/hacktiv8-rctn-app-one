@@ -1,5 +1,6 @@
+import { Button } from 'antd';
 import React, { useState } from 'react';
-import Button from '../../../atoms/Button';
+import './style.css';
 
 const CounterFC = () => {
   const [count, setCount] = useState(0);
@@ -25,17 +26,17 @@ const CounterFC = () => {
         marginTop: '50px',
       }}
     >
-      <h3 style={{ fontWeight: 600 }}>Functional Component (Hooks)</h3>
+      <h3>Functional Component (Hooks)</h3>
       <div>{count}</div>
-      <div style={{ margin: '10px' }}>
-        <Button style={{ width: '50px' }} onClick={handleIncrement}>
+      <div className="btn-container">
+        <Button type="primary" className="btn-w-50" onClick={handleIncrement}>
           +
         </Button>
-        <Button style={{ width: '50px', marginLeft: '10px' }} onClick={handleDecrement}>
+        <Button type="primary" className="btn-w-50 ml-1" onClick={handleDecrement}>
           -
         </Button>
       </div>
-      {error && <div style={{ color: '#f00' }}>Minus is not allowed</div>}
+      {error && <p className="error-text">Minus is not allowed</p>}
     </div>
   );
 };
