@@ -1,5 +1,6 @@
 import { Button, Drawer, Menu } from 'antd';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const NavBar = () => {
@@ -11,29 +12,39 @@ const NavBar = () => {
   return (
     <nav className="menu-bar">
       <div className="logo">
-        <a href="/">QTemu</a>
+        <Link to="/">QTemu</Link>
       </div>
       <div className="menu-con">
         <div className="left-menu">
           <Menu mode="horizontal" className="navbar-top">
             <Menu.Item>
-              <a href="/" className="navbar-top-link">
+              <Link to="/" className="navbar-top-link">
                 Create Meetup
-              </a>
+              </Link>
             </Menu.Item>
             <Menu.Item>
-              <a href="/" className="navbar-top-link">
+              <Link to="/" className="navbar-top-link">
                 Explore
-              </a>
+              </Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/counter" className="navbar-top-link">
+                Counter
+              </Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/star-wars" className="navbar-top-link">
+                Star Wars
+              </Link>
             </Menu.Item>
           </Menu>
         </div>
         <div className="right-menu">
           <Menu mode="horizontal" className="navbar-top">
             <Menu.Item>
-              <a href="/" className="navbar-top-link">
+              <Link to="/" className="navbar-top-link">
                 Login
-              </a>
+              </Link>
             </Menu.Item>
           </Menu>
         </div>
@@ -50,13 +61,13 @@ const NavBar = () => {
         >
           <Menu mode="inline">
             <Menu.Item key="1">
-              <a href="/">Create Meetup</a>
+              <Link to="/">Create Meetup</Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <a href="/">Explore</a>
+              <Link to="/">Explore</Link>
             </Menu.Item>
             <Menu.Item key="3">
-              <a href="/">Login</a>
+              <Link to="/">Login</Link>
             </Menu.Item>
           </Menu>
         </Drawer>

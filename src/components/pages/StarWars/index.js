@@ -2,6 +2,7 @@ import { Button } from 'antd';
 import axios from 'axios';
 import React from 'react';
 import StarWarsDetail from '../../organisms/StarWarsDetail';
+import Layout from '../../templates/Layout';
 import './style.css';
 
 const URL = 'https://swapi.dev/api/people/';
@@ -36,7 +37,7 @@ class StarWars extends React.Component {
   render() {
     const { data, currentUrlDetail } = this.state;
     return (
-      <>
+      <Layout>
         <div className="d-flex mb-50">
           <div className="text-center">
             <h1>Details</h1>
@@ -55,7 +56,7 @@ class StarWars extends React.Component {
             )}
           </div>
         </div>
-      </>
+      </Layout>
     );
   }
 }

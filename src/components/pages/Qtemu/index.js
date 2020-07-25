@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AttendanceInfo from '../../atoms/AttendanceInfo';
 import Card from '../../molecules/Card';
+import Header from '../../organisms/Header';
 import Layout from '../../templates/Layout';
 import './style.css';
 
 const QtemuPage = () => (
   <Layout>
+    <Header />
     <section>
       <h4>Next Meetup</h4>
       <div className="section-container">
@@ -38,7 +41,7 @@ const QtemuPage = () => (
     </section>
     <section>
       <h4>Members</h4>
-      <a href="/">See all</a>
+      <Link to="/">See all</Link>
       <div className="section-container">
         <div className="section-box">
           <div className="member-content">
@@ -57,7 +60,7 @@ const QtemuPage = () => (
     <section />
     <section>
       <h4>Past Meetups</h4>
-      <a href="/">See all</a>
+      <Link to="/">See all</Link>
       <div className="section-past-meetups">
         <Card title="27 November 2017">
           <p>#39 JakartaJS April Meetup with kumparan</p>
