@@ -1,42 +1,51 @@
+/* eslint-disable react/destructuring-assignment */
 import { Button } from 'antd';
+import PropTypes from 'prop-types';
 import React from 'react';
+import { connect } from 'react-redux';
+import { decrementCounterCc, incrementCounterCc } from '../../../../redux/actions';
 import './style.css';
+
+const propTypes = {
+  counter: PropTypes.number.isRequired,
+  decrementCounterCc: PropTypes.func.isRequired,
+  incrementCounterCc: PropTypes.func.isRequired,
+};
 
 class CounterCC extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      count: 0,
+      counter: 0,
       error: false,
     };
   }
 
+  componentDidUpdate(prevProps) {
+    const { counter } = this.props;
+    if (counter !== prevProps.counter) {
+      this.setState({ counter }); // eslint-disable-line
+    }
+  }
+
   handleIncrement = () => {
-    const { count } = this.state;
-    this.setState({ error: false, count: count + 1 });
+    this.props.incrementCounterCc();
+    this.setState({ error: false });
   };
 
   handleDecrement = () => {
-    const { count } = this.state;
-    if (count === 0) return this.setState({ error: true });
-    this.setState({ count: count - 1 });
+    const { counter } = this.state;
+    if (counter === 0) return this.setState({ error: true });
+    this.props.decrementCounterCc();
   };
 
   render() {
-    const { count, error } = this.state;
+    const { counter, error } = this.state;
     return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: '50px',
-        }}
-      >
+      <div className="container">
         <h3>Class Component</h3>
-        <div>{count}</div>
+        <div>{counter}</div>
         <div className="btn-container">
           <Button type="primary" className="btn-w-50" onClick={this.handleIncrement}>
             +
@@ -51,4 +60,12 @@ class CounterCC extends React.Component {
   }
 }
 
-export default CounterCC;
+CounterCC.propTypes = propTypes;
+
+const mapStateToProps = (state) => ({
+  counter: state.counterCc,
+});
+
+const mapDispatchToProps = { incrementCounterCc, decrementCounterCc };
+
+export default connect(mapStateToProps, mapDispatchToProps)(CounterCC);

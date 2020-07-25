@@ -1,33 +1,33 @@
 import { Button } from 'antd';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrementCounterFc, incrementCounterFc } from '../../../../redux/actions';
 import './style.css';
 
 const CounterFC = () => {
-  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [error, setError] = useState(false);
+  const counterSelector = useSelector((state) => state.counterFc);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    setCounter(counterSelector);
+  }, [counterSelector]);
 
   const handleIncrement = () => {
+    dispatch(incrementCounterFc());
     setError(false);
-    setCount(count + 1);
   };
 
   const handleDecrement = () => {
-    if (count === 0) return setError(true);
-    setCount(count - 1);
+    if (counter === 0) return setError(true);
+    dispatch(decrementCounterFc());
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '50px',
-      }}
-    >
+    <div className="container">
       <h3>Functional Component (Hooks)</h3>
-      <div>{count}</div>
+      <div>{counter}</div>
       <div className="btn-container">
         <Button type="primary" className="btn-w-50" onClick={handleIncrement}>
           +
