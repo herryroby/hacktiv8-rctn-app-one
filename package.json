@@ -1,6 +1,7 @@
 {
-  "name": "first-react-app",
+  "name": "hacktiv8/rctn-app-one",
   "version": "0.1.0",
+  "author": "Herry Roby",
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.6.4",

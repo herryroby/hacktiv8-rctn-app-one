@@ -1,3 +1,7 @@
+# HACKTIV8/RCTN-APP-ONE
+
+![Hero Page](./.github/images/hero.png?raw=true 'Hero Page')
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
