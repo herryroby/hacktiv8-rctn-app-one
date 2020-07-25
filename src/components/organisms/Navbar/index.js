@@ -67,6 +67,12 @@ const NavBar = () => {
               <Link to="/">Explore</Link>
             </Menu.Item>
             <Menu.Item key="3">
+              <Link to="/counter">Counter</Link>
+            </Menu.Item>
+            <Menu.Item key="4">
+              <Link to="/star-wars">Star Wars</Link>
+            </Menu.Item>
+            <Menu.Item key="5">
               <Link to="/">Login</Link>
             </Menu.Item>
           </Menu>

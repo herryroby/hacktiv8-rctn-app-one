@@ -1,11 +1,14 @@
 import { Button } from 'antd';
 import React from 'react';
+import hacktiv8Img from '../../../assets/images/hacktiv8.png';
 import './style.css';
 
 const Header = () => (
   <header>
     <div className="header-container">
-      <div className="header-image" />
+      <div className="header-image">
+        <img src={hacktiv8Img} alt="hacktiv8" />
+      </div>
       <div className="header-info">
         <p className="header-title">Hacktiv8 Meetup</p>
         <p>

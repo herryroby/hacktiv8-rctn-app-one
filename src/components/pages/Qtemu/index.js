@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import user1 from '../../../assets/images/user1.jpg';
 import AttendanceInfo from '../../atoms/AttendanceInfo';
 import Card from '../../molecules/Card';
 import Header from '../../organisms/Header';
@@ -45,7 +46,9 @@ const QtemuPage = () => (
       <div className="section-container">
         <div className="section-box">
           <div className="member-content">
-            <div className="profile-picture" />
+            <div className="user">
+              <img src={user1} alt="user1" />
+            </div>
             <div className="member-info">
               <p className="sub-section-title">Organizers</p>
               <p>
