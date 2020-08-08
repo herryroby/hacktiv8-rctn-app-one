@@ -27,12 +27,12 @@ const CounterFC = () => {
   return (
     <div className="container">
       <h3>Functional Component (Hooks)</h3>
-      <div>{counter}</div>
+      <div id="result">{counter}</div>
       <div className="btn-container">
-        <Button type="primary" className="btn-w-50" onClick={handleIncrement}>
+        <Button id="increment-btn" type="primary" className="btn-w-50" onClick={handleIncrement}>
           +
         </Button>
-        <Button type="primary" className="btn-w-50 ml-1" onClick={handleDecrement}>
+        <Button id="decrement-btn" type="primary" className="btn-w-50 ml-1" onClick={handleDecrement}>
           -
         </Button>
       </div>

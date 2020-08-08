@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class increment 1 test should to match snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <h3>
+      Functional Component (Hooks)
+    </h3>
+    <div
+      id="result"
+    >
+      0
+    </div>
+    <div
+      class="btn-container"
+    >
+      <button
+        class="ant-btn btn-w-50 ant-btn-primary"
+        id="increment-btn"
+        type="button"
+      >
+        <span>
+          +
+        </span>
+      </button>
+      <button
+        class="ant-btn btn-w-50 ml-1 ant-btn-primary"
+        id="decrement-btn"
+        type="button"
+      >
+        <span>
+          -
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

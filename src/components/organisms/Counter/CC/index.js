@@ -45,12 +45,12 @@ class CounterCC extends React.Component {
     return (
       <div className="container">
         <h3>Class Component</h3>
-        <div>{counter}</div>
+        <div id="result">{counter}</div>
         <div className="btn-container">
-          <Button type="primary" className="btn-w-50" onClick={this.handleIncrement}>
+          <Button id="increment-btn" type="primary" className="btn-w-50" onClick={this.handleIncrement}>
             +
           </Button>
-          <Button type="primary" className="btn-w-50 ml-1" onClick={this.handleDecrement}>
+          <Button id="decrement-btn" type="primary" className="btn-w-50 ml-1" onClick={this.handleDecrement}>
             -
           </Button>
         </div>
